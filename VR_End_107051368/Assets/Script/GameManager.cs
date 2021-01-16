@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public void RestartGame()
     {
-        SceneManager.LoadScene("vr期末");
+        SceneManager.LoadScene("vr場景");
     }
 
     public void QuitGame()
