@@ -6,14 +6,6 @@ public class ScoreManager : MonoBehaviour
     public Text textScore;
     public int score;
     public int Scorein = 2;
-    public AudioClip soundIn;
-
-    private AudioSource aud;
-
-    private void Awake()
-    {
-        aud = GetComponent<AudioSource>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,8 +31,6 @@ public class ScoreManager : MonoBehaviour
     private void AddScore()
     {
         score += Scorein;
-        textScore.text = "Score" + score;
-        aud.PlayOneShot(soundIn, Random.Range(1f, 2f));
+        textScore.text = "Score:\n\n" + score;
     }
-
 }
